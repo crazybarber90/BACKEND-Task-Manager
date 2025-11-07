@@ -49,7 +49,7 @@ export async function registerUser(req, res) {
 }
 
 // Login
-export async function login(req, res) {
+export async function loginUser(req, res) {
   const { email, password } = req.body
 
   if (!email || !password) {
