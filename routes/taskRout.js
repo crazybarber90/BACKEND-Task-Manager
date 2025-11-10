@@ -16,7 +16,7 @@ taskRouter
   .post(authMiddleware, createTask)
 
 taskRouter
-  .route(':id/gp')
+  .route('/:id/gp')
   .get(authMiddleware, getTaskById)
   .put(authMiddleware, updateTask)
   .delete(authMiddleware, deleteTask)
