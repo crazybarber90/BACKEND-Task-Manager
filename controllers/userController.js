@@ -142,7 +142,7 @@ export async function updatePassword(req, res) {
       .json({ success: false, message: 'Password invalid or too short' })
   }
   try {
-    const user = User.findById(req.user.id).select('password')
+    const user = await User.findById(req.user.id).select('password')
     if (!user) {
       return res.status(404).json({ success: false, message: 'User not found' })
     }
@@ -161,5 +161,3 @@ export async function updatePassword(req, res) {
     res.status(500).json({ success: false, message: 'Server Error' })
   }
 }
-
-//44min

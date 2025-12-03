@@ -17,7 +17,7 @@ userRouter.post('/login', loginUser)
 
 // PRIVATE LINKS / protect also
 userRouter.get('/me', authMiddleware, getCurrentUser)
-userRouter.post('/profile', authMiddleware, updateProfile)
+userRouter.put('/profile', authMiddleware, updateProfile)
 userRouter.put('/password', authMiddleware, updatePassword)
 
 export default userRouter
